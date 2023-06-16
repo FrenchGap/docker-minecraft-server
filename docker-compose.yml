@@ -5,12 +5,13 @@ services:
     image: itzg/minecraft-server
     environment:
       EULA: "true"
+      SERVER_NAME: "FrenchGap MC1"
       MOTD: "Serveur MC1 FrenchGap"
       DIFFICULTY: "normal"
     ports:
       - "25565:25565"
     volumes:
-      - data:/data
+      - ./minecraft-data:/data
     stdin_open: true
     tty: true
     restart: unless-stopped
