@@ -5,7 +5,7 @@ services:
     image: itzg/minecraft-server
     environment:
       EULA: "true"
-      MOTD: "Serveur MC1 de Peter"
+      MOTD: "Serveur MC1 FrenchGap"
       DIFFICULTY: "normal"
     ports:
       - "25565:25565"
