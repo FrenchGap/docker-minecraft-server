@@ -7,11 +7,12 @@ services:
       EULA: "true"
       MOTD: "Serveur MC1 de Peter"
       DIFFICULTY: "normal"
-      WHITELIST_FILE: "/extras/whitelist.json"
+      WHITELIST_FILE: "/config/whitelist.json"
     ports:
       - "25565:25565"
     volumes:
       - data:/data
+      - ./extras/whitelist.json:/config/whitelist.json:ro
     stdin_open: true
     tty: true
     restart: unless-stopped
@@ -28,6 +29,7 @@ services:
       - "80:80"
     depends_on:
       - mc
+    restart: unless-stopped
 
 volumes:
   data: {}
