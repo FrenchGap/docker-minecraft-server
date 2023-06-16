@@ -30,6 +30,3 @@ services:
     depends_on:
       - mc
     restart: unless-stopped
-
-volumes:
-  data: {}
