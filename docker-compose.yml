@@ -7,7 +7,7 @@ services:
       EULA: "true"
       MOTD: "Serveur MC1 de Peter"
       DIFFICULTY: "normal"
-      WHITELIST_FILE: "/config/whitelist.json"
+      WHITELIST_FILE: /config/whitelist.json
     ports:
       - "25565:25565"
     volumes:
