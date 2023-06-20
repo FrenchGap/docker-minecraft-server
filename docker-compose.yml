@@ -14,7 +14,7 @@ services:
     volumes:
       - ./minecraft-data:/data
       - ./extras/whitelist.json:/data/whitelist.json
-      - ./extras/operators.json:/data/operators.json
+      - ./extras/ops.json:/data/ops.json
     stdin_open: true
     tty: true
     restart: unless-stopped
