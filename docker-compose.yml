@@ -18,8 +18,8 @@ services:
     stdin_open: true
     tty: true
     restart: unless-stopped
-  networks:
-    - mc1
+    networks:
+      - mc1
 
   nginx:
     container_name: nginx
