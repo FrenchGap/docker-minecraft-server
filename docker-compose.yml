@@ -1,21 +1,25 @@
 version: "3.8"
 
 services:
-  mc:
+  mc1:
     image: itzg/minecraft-server
     environment:
       EULA: "true"
       SERVER_NAME: "FrenchGap MC1"
       MOTD: "Serveur MC1 FrenchGap"
       DIFFICULTY: "normal"
+      OPS_FILE: "operators.json"
     ports:
       - "25565:25565"
     volumes:
       - ./minecraft-data:/data
       - ./extras/whitelist.json:/data/whitelist.json
+      - ./extras/operators.json:/data/operators.json
     stdin_open: true
     tty: true
     restart: unless-stopped
+  networks:
+    - mc1
 
   nginx:
     container_name: nginx
@@ -30,3 +34,10 @@ services:
     depends_on:
       - mc
     restart: unless-stopped
+    networks:
+      - mc1
+
+networks:
+  mc1:
+    driver: "bridge"
+    external: true
