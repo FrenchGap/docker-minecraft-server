@@ -8,7 +8,6 @@ services:
       SERVER_NAME: "FrenchGap MC1"
       MOTD: "Serveur MC1 FrenchGap"
       DIFFICULTY: "normal"
-      OPS_FILE: "operators.json"
     ports:
       - "25565:25565"
     volumes:
