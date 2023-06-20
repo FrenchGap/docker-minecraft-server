@@ -32,7 +32,7 @@ services:
     ports:
       - "80:80"
     depends_on:
-      - mc
+      - mc1
     restart: unless-stopped
     networks:
       - mc1
