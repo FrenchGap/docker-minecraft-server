@@ -1,6 +1,8 @@
 [
   {
     "uuid": "dc56944c-3e69-46bb-a004-4274ef6d6591",
-    "name": "FrenchGap"
+    "name": "FrenchGap",
+    "level": 4,
+    "bypassesPlayerLimit": false
   }
 ]
